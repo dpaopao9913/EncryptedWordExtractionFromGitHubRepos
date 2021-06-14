@@ -1,7 +1,24 @@
 # EncryptedWordExtractionFromGitHubRepos
 
 GitHub 上にあるファイルから、暗号化文字列（例：APIキーなど）を自動抽出する<br>
-Auto extraction program of encrypted strings (i.e. API key) from any files on GitHub
+Auto extraction program of encrypted strings (i.e. API key) from any files on GitHub.
+
+以下の暗号化文字列の抽出アルゴリズムは一旦それっぽい文字列を抽出できるように書いていますが、適宜お好みで変更して使ってください。
+The following excrypted word extraction algorithm is just my preference, please change when you use based on your preferences.
+
+```python
+#################  独自のアルゴリズム  ################################
+  temp_list = re.findall('[a-z0-9\+=]+', code_line, flags=re.IGNORECASE)
+
+  for word in temp_list:
+      if word_length_lower_limit <= len(word) and len(word) <= word_length_upper_limit: # 文字列の長さをチェック
+          isIncludeDigit = bool(re.search(r'\d', word))
+          isIncludeAlphabet = bool(re.search(r'[a-zA-Z]', word))
+          if isIncludeDigit and isIncludeAlphabet:                   # 文字列に英字と数字両方あるかどうかチェック
+              encrypted_word_list.append(word)
+  #######################################################################
+```
+
 
 # Usage
 
