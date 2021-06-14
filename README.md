@@ -10,7 +10,7 @@ Please replace the following specific names to yours.
 
   - 'chrome driver path'
   - 'repository name'
-  - <api access token>
+  - \<api access token\>
 
 ```python
 chrome_driver_path = 'chrome driver path'
