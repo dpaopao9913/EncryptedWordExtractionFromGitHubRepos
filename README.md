@@ -5,9 +5,21 @@ Auto extraction program of encrypted strings (i.e. API key) from any files on Gi
 
 # Usage
 
+以下の行のコードをご自身のものに置き換えてご利用ください。<br>
+Please replace the following specific names to yours.
 
+  - 'chrome driver path'
+  - 'repository name'
+  - <api access token>
 
-  ```python
-  trans_url = my_google_trans_api + '?text=' + source + '&source=en&target=ja'
-  ```
+```python
+chrome_driver_path = 'chrome driver path'
+
+# git関連の設定
+repository_path = 'repository name'
+if not os.path.isdir(repository_path):
+    git.Git().clone("https://<api access token>:x-oauth-basic@github.com/<your github domain>/" + repository_path + ".git")
+else:
+    pass
+```
 
