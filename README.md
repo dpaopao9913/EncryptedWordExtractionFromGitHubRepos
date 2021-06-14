@@ -1,12 +1,14 @@
 # EncryptedWordExtractionFromGitHubRepos
 
-GitHub 上にあるファイルから、暗号化文字列（例：APIキーなど）を自動抽出する<br><br>
+GitHub 上にあるファイルから、暗号化文字列（例：APIキーなど）を自動抽出する<br>
 Auto extraction program of encrypted strings (i.e. API key) from any files on GitHub.
 
-以下の暗号化文字列の抽出アルゴリズムは一旦それっぽい文字列を抽出できるように書いていますが、適宜お好みで変更して使ってください。<br><br>
+<br>
+
+以下の暗号化文字列の抽出アルゴリズムは一旦それっぽい文字列を抽出できるように書いていますが、適宜お好みで変更して使ってください。<br>
 The following excrypted word extraction algorithm is just my preference, please change when you use based on your preferences.
 
-<br><br>
+<br>
 
 ```python
 #################  独自のアルゴリズム  ################################
@@ -21,7 +23,7 @@ The following excrypted word extraction algorithm is just my preference, please 
   #######################################################################
 ```
 
-<br><br>
+<br>
 
 # Usage
 
@@ -32,7 +34,7 @@ Please replace the following specific names to yours.
   - 'repository name'
   - \<api access token\>
 
-<br><br>
+<br>
 
 ```python
 chrome_driver_path = 'chrome driver path'
